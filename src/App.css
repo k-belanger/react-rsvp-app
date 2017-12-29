@@ -1,0 +1,10 @@
+.main ul li span {
+    border: 1px solid #fff;
+    padding: .2em;
+}
+li button {
+    min-width:50px;
+}
+li input[type=text] {
+    margin-bottom:7px;
+}
