@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Guest from './guest';
+import PendingGuest from './pendingGuest';
 
 const GuestList = props => 
     <ul>
-       {props.guests
+        <PendingGuest name={props.pendingGuest}/>
+        {props.guests
             .filter(guest => !props.isFiltered || guest.isConfirmed)
             .map((guest, index) =>
             <Guest 
@@ -28,7 +30,8 @@ GuestList.propTypes = {
     toggleEditingAt: PropTypes.func.isRequired,
     setNameAt: PropTypes.func.isRequired,
     isFiltered: PropTypes.bool.isRequired,
-    handleRemoveGuest: PropTypes.func.isRequired
+    handleRemoveGuest: PropTypes.func.isRequired,
+    pendingGuest: PropTypes.string.isRequired
 }
 
 export default GuestList;
