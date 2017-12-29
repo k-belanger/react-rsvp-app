@@ -1,4 +1,3 @@
-# RSVP App 
-## built with React
+# React RSVP App
 
 ...in progress
